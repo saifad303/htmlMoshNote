@@ -1,0 +1,9 @@
+.product > p {
+  color: red;
+}
+
+/* 
+1) Doirect selector (>)
+2) Psudo classes
+    a) first child
+*/
