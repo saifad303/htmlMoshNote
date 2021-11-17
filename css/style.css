@@ -1,9 +1,110 @@
-.product > p {
-  color: red;
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  height: 30em;
+  width: 70%;
+  border: 5px solid black;
+  display: flex;
+  flex-direction: row;
 }
 
+.box {
+  /* flex-basis: 20rem; */
+  margin-right: 10px;
+  height: 120px;
+  width: 120px;
+  background-color: gold;
+}
+.box-a {
+  flex-basis: 20rem;
+}
+/* ---------------- */
+/* TOPIC LIST */
+/* ----------------- */
 /* 
 1) Doirect selector (>)
 2) Psudo classes
-    a) first child
+    a) :first-child
+    a) :first-of-type
+    #p:first-of-type
+    -------------------
+    b)last-child
+    b)last-of-type
+    #p:first-of-type
+    --------------------
+    c) nth-child(odd or even)
+    ----------------------
+    Link psudo
+    d) a:visited
+       a:link
+       a:hover
+       a:focus
+
+3) Psudo Element
+    a) p::first-letter
+    b) p::first-line
+    c) p::selection
+    d) p::after
+    e) p::before
+
+4) selector specificity
+    a) 
+
+5) linear gradient.
+
+6) overflow: hidden auto
+
+7) Measurment Units
+  ------------------
+  ABSOLUTE        RELATVE
+  -----------------------
+  px       |      %
+  pt       |      vh
+  in       |      vw
+  cm       |       
+  mm       |
+ 
+  Note: % = relative to the size of container
+    vh,vw = relative to the size of viewport
+    em,rm = relative to the size of font
+
+    1em = 16px font size(16px is a by default font size in HTML)
+    that means if the box has font size of 10px then the calculation will be
+    1em * font size of of the current element wich is 16 = 16px
+    10em * 16px font size = 160px element size
+
+8) Flex-box
+  a) display: flex;
+  b) flex-direction: row(default), column, row-reverse, column-reverse;
+  c) to align items
+      # justify-content (along with main-axis) **
+        a) start
+        b) end
+        c) center
+        d) space-between
+      # align-items (along with cross-axis) **
+      # align-content (to maintain line. along main-axis)
+  d) flex-wrap (It determines whether elements will stay in same line or in separate line.)
+      # wrap, no-wrap, ...
+      --------------------------
+      Attributes for flex items.
+      --------------------------
+  e) align-self (It define individual items location. work along cross-axis, for flex items not for container).     
+  f) sizing flex items (for flex items, not for container).
+      a) flex-basis (the initial size of a flex item).
+      Note: 1) flex-basis is used to manupulate the size of flex-items.Shape incrementation of a flex-item will depend on main-axis.
+      example:
+      .flex-container{
+        flex-direction: row
+      } 
+      .flex-item{
+        flex-basis: 100px
+      }
+      Then the size will increase horizontally, because in this case the main-axis is row.
+      ** auto is the default size, if the size is auto then it will adapt the size
+
+
+      b) flex-growth (the growth factor).
+      c) flex-shrink (the shrink factor).
+      d) flex (short hand for all properties)
 */
