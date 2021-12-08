@@ -6,17 +6,12 @@
   border: 5px solid black;
   display: flex;
   flex-direction: row;
+  align-items: center;
 }
-
 .box {
-  /* flex-basis: 20rem; */
-  margin-right: 10px;
-  height: 120px;
-  width: 120px;
+  /* height: 50px;
+  width: 50px; */
   background-color: gold;
-}
-.box-a {
-  flex-basis: 20rem;
 }
 /* ---------------- */
 /* TOPIC LIST */
@@ -55,15 +50,15 @@
 6) overflow: hidden auto
 
 7) Measurment Units
-  ------------------
-  ABSOLUTE        RELATVE
+  -----------------------
+  ABSOLUTE       RELATIVE
   -----------------------
   px       |      %
   pt       |      vh
   in       |      vw
   cm       |       
   mm       |
- 
+
   Note: % = relative to the size of container
     vh,vw = relative to the size of viewport
     em,rm = relative to the size of font
@@ -96,7 +91,7 @@
       example:
       .flex-container{
         flex-direction: row
-      } 
+      }
       .flex-item{
         flex-basis: 100px
       }
@@ -107,4 +102,23 @@
       b) flex-growth (the growth factor).
       c) flex-shrink (the shrink factor).
       d) flex (short hand for all properties)
+9) Grid
+      Container Attributes.
+      # container attributes.
+      a) display: grid
+      b) grid-template-rows
+      c) grid-teplate-columns
+      example: 
+        For (3rows X 2columns).
+        .container{
+          display: grid;
+          grid-template-rows: 100px 100px 100px;
+          gird-template-columns: 200px 200px;
+          or in short we can write
+          grid-template: repeat(3, 100px) / repeat(2, 200px)
+        } 
+      d) justify-items: stretch(default) start, end, center;
+      e) align-items: stretch(default), start, end, center;
+      Note: The default value will not work if the box has predefined height and width;
+
 */
