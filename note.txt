@@ -1,0 +1,136 @@
+/* ---------------- */
+/* TOPIC LIST */
+/* ----------------- */
+/* 
+1) Direct selector (>)
+2) pseudo classes
+    a) :first-child
+    a) :first-of-type
+    #p:first-of-type
+    -------------------
+    b)last-child
+    b)last-of-type
+    #p:first-of-type
+    --------------------
+    c) nth-child(odd or even)
+    ----------------------
+    Link pseudo
+    d) a:visited
+       a:link
+       a:hover
+       a:focus
+
+3) pseudo Element
+    a) p::first-letter
+    b) p::first-line
+    c) p::selection
+    d) p::after
+    e) p::before
+
+4) selector specificity
+    a) 
+
+5) linear gradient.
+
+6) overflow: hidden auto
+
+7) measurement Units
+  -----------------------
+  ABSOLUTE       RELATIVE
+  -----------------------
+  px       |      %
+  pt       |      vh
+  in       |      vw
+  cm       |       
+  mm       |
+
+  Note: % = relative to the size of container
+    vh,vw = relative to the size of viewport
+    em,rm = relative to the size of font
+
+    1em = 16px font size(16px is a by default font size in HTML)
+    that means if the box has font size of 10px then the calculation will be
+    1em * font size of of the current element which is 16 = 16px
+    10em * 16px font size = 160px element size
+
+8) Flex-box
+  a) display: flex;
+  b) flex-direction: row(default), column, row-reverse, column-reverse;
+  c) to align items
+      # justify-content (along with main-axis) **
+        a) start
+        b) end
+        c) center
+        d) space-between
+      # align-items (along with cross-axis) **
+      # align-content (to maintain line. along main-axis)
+      align-content and flex-wrap works with multiple line content.
+  d) flex-wrap (It determines whether elements will stay in same line or in separate line.)
+      # wrap, no-wrap, ...
+      --------------------------
+      Attributes for flex items.
+      --------------------------
+  e) align-self (It define individual items location. work along cross-axis, for flex items not for container).     
+  f) sizing flex items (for flex items, not for container).
+      a) flex-basis (the initial size of a flex item).
+      Note: 1) flex-basis is used to manipulate the size of flex-items.Shape incrementation of a flex-item will depend on main-axis.
+      example:
+      .flex-container{
+        flex-direction: row
+      }
+      .flex-item{
+        flex-basis: 100px
+      }
+      Then the size will increase horizontally, because in this case the main-axis is row.
+      ** auto is the default size, if the size is auto then it will adapt the size
+
+
+      b) flex-grow (the growth factor).
+      Note: 0 is the default value.
+      c) flex-shrink (the shrink factor).
+      d) flex (short hand for all properties)
+9) Grid
+      Container Attributes.
+      # container attributes.
+      a) display: grid
+      b) grid-template-rows
+      c) grid-template-columns
+      example: 
+        For (3rows X 2columns).
+        .container{
+          display: grid;
+          grid-template-rows: 100px 100px 100px;
+          gird-template-columns: 200px 200px;
+          or in short we can write
+          grid-template: repeat(3, 100px) / repeat(2, 200px)
+        } 
+      d) justify-items: stretch(default) start, end, center;
+      e) align-items: stretch(default), start, end, center;
+      Note: The default value will not work if the box has predefined height and width;
+-------------------------------------------------------
+Transition 2D
+-------------------------------------------------------
+1) Transform: In css this transition property property changes a shape of an element.
+values: Rotate(deg), scale(x&y), skew(x,y)(deg), 
+translate(x,y) helps an element to move one place to another.
+transition: animation effect
+transition: transform(attributename) 0.5s(animationtime) liniar(transition delay).
+
+Example: 
+
+
+.animationclass{
+  transition: transform 0.2s cubic-bezier(0.48, 0.47, 0.55, 0.53),
+    background-color 0.2s;
+}
+
+.animationClass:hover{
+  transform: rotate(45deg) translateX(20px);
+}
+
+.animationClass:hover{
+  transform: translateX(20px) rotate(45deg);
+  
+}
+
+*/
